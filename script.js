@@ -19,12 +19,25 @@ function generatePassword () {
   var confirmIfUpperCaseAllow;
   var confirmIfLowerCaseAllow;
 }
-var confirmPasswordLength = 10 // testing 0-8 will display the alert to enter how many characters you want
-if (confirmPasswordLength < 8 || confirmPasswordLength >128) {
-  confirmPasswordLength = window.prompt ('How many characters do you want to generate?');
-  console.log(confirmPasswordLength); 
-}
-
+var confirmPasswordLength = 520 // testing 0-8 will display the alert to enter how many characters you want
+do {
+  if (confirmPasswordLength < 8 || confirmPasswordLength >128) {
+    confirmPasswordLength = window.prompt ('Enter Number (8-128) characters you want to generate');
+    // console.log(confirmPasswordLength); 
+  }
+  if (confirmPasswordLength >= 8 && confirmPasswordLength <=128) {
+      do {
+        confirmIfSpecialCharacterAllow = window.confirm ('Click OK if you want to include special characters');
+        confirmIfNumbericAllow = window.confirm ('Click OK if you want to include numeric characters');
+        confirmIfUpperCaseAllow = window.confirm ('Click OK if you want to include uppercase characters');
+        confirmIfNumbericAllow = window.confirm ('Click OK if you want to include lowercase characters');
+      } while (
+        confirmIfSpecialCharacterAllow && !confirmIfNumbericAllow && !confirmIfUpperCaseAllow && !confirmIfLowerCaseAllow
+      );
+  }
+} while (
+  confirmPasswordLength && (confirmPasswordLength < 8 || confirmPasswordLength > 128)
+);
 
 
 // Write password to the #password input
