@@ -7,10 +7,18 @@ var numbers ='0123456789';
 var lowerLetter = 'abcdefghijklmnopqrstuvwxyz';
 var upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+// Get random characters 
 
 
 
-
+// write the function to generatePassword
+function generatePassword () {
+  var confirmPasswordLength = 0;
+  var confirmIfSpecialCharacterAllow;
+  var confirmIfNumbericAllow;
+  var confirmIfUpperCaseAllow;
+  var confirmIfLowerCaseAllow;
+}
 
 
 
