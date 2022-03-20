@@ -19,6 +19,11 @@ function generatePassword () {
   var confirmIfUpperCaseAllow;
   var confirmIfLowerCaseAllow;
 }
+var confirmPasswordLength = 10 // testing 0-8 will display the alert to enter how many characters you want
+if (confirmPasswordLength < 8 || confirmPasswordLength >128) {
+  confirmPasswordLength = window.prompt ('How many characters do you want to generate?');
+  console.log(confirmPasswordLength); 
+}
 
 
 
