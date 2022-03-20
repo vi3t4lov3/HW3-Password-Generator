@@ -7,8 +7,17 @@ var numbers ='0123456789';
 var lowerLetter = 'abcdefghijklmnopqrstuvwxyz';
 var upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-// Get random characters 
+// Get random index from characters
+function generateString(lengh) {
+  var result = '';
+  var charactersLength = specialCharacters.length;
+  for (var i = 0; i < lengh; i++) {
+    result += specialCharacters.charAt(Math.floor(Math.random() * charactersLength))
+  }
+  return result;
 
+}
+console.log(generateString(10));
 
 
 // write the function to generatePassword
@@ -18,21 +27,18 @@ function generatePassword () {
   var confirmIfUpperCaseAllow = true;
   var confirmIfNumbericAllow = true;
   var confirmIfSpecialCharacterAllow = true;
-
-  var confirmPasswordLength = 0  // testing 0-8 will display the alert to enter how many characters you want
-
 //this is the statement to select the lengh & characters
 do {
   if (confirmPasswordLength < 8 || confirmPasswordLength >128) {
-    confirmPasswordLength = window.prompt ('Enter Number (8-128) characters you want to generate');
+    confirmPasswordLength = window.prompt ('Please Enter Number (8-128) password you want to generate!');
     console.log(confirmPasswordLength); 
   }
   if (confirmPasswordLength >= 8 && confirmPasswordLength <=128) {
       do {
-        confirmIfNumbericAllow = window.confirm ('Click OK if you want to include LOWERCASE characters');
-        confirmIfUpperCaseAllow = window.confirm ('Click OK if you want to include UPPERCASE characters');
-        confirmIfNumbericAllow = window.confirm ('Click OK if you want to include NUMERIC characters');
-        confirmIfSpecialCharacterAllow = window.confirm ('Click OK if you want to include SPECIAL characters');
+        confirmIfNumbericAllow = window.confirm ('Click OK or press ENTER to include LOWERCASE characters. Click Cancel to not include.');
+        confirmIfUpperCaseAllow = window.confirm ('Click OK or press ENTER to include UPPERCASE characters. Click Cancel to not include.');
+        confirmIfNumbericAllow = window.confirm ('Click OK or press ENTER to include NUMBER. Click Cancel to not include.');
+        confirmIfSpecialCharacterAllow = window.confirm ('Click OK or press ENTER to include SPECIAL characters. Click Cancel to not include.');
       } while (
         !confirmIfLowerCaseAllow && 
         !confirmIfUpperCaseAllow && 
@@ -44,8 +50,9 @@ do {
   confirmPasswordLength && (confirmPasswordLength < 8 || confirmPasswordLength > 128)
 );
 
-// statement after characters had been select
+// statement after characters had been selected
 if (confirmIfLowerCaseAllow) {
+  // passwordCharacters = finalPasswordGenerator;
   console.log(confirmIfLowerCaseAllow);
 }
 if (confirmIfUpperCaseAllow) {
@@ -57,7 +64,7 @@ if (confirmIfNumbericAllow) {
 if (confirmIfSpecialCharacterAllow) {
   console.log(confirmIfSpecialCharacterAllow);
 }
-// return (generatePassword);
+return (generatePassword);
 }
 // Write password to the #password input
 function writePassword() {
