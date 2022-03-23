@@ -82,7 +82,7 @@ if (confirmIfLowerCaseAllow) {
     lowerLetters,
     passwordCharacters
   );
-  console.log(lowerLetters,passwordCharacters);
+  // console.log(lowerLetters,passwordCharacters);
 }
 if (confirmIfUpperCaseAllow) {
   passwordCharacters = collectAllElementsIntoCharacters(
