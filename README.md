@@ -16,7 +16,8 @@ $ cd HW3-Password-Generator
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-## The Font Page
+## The Demo Page
+https://vi3t4lov3.github.io/HW3-Password-Generator/
 
 ![imagename](./img/Fontpage.png)
 
@@ -24,7 +25,7 @@ $ cd HW3-Password-Generator
   
 ![imagename](./img/img1.png)
 
-- The user will choose the lowercase includes or not
+- The user will choose the lowercase includes or notHere i
   
 ![imagename](./img/img2.png)
 
@@ -43,3 +44,4 @@ $ cd HW3-Password-Generator
 - The final result
   
 ![imagename](./img/img6.png)
+
