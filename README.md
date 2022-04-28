@@ -7,7 +7,7 @@ This repository holds the contents of generate random passwords based on criteri
  # Usage
  You can run a local copy of this site by issuing the following commands. 
 ```bash
-$ git clone https://github.com/vi3t4lov3/HW3-Password-Generator.git
+$ git clone https://github.com/vi3t4lov3/Password-Generator.git
 $ cd HW3-Password-Generator
 ```
 ## Contributing
@@ -17,7 +17,7 @@ $ cd HW3-Password-Generator
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 ## The Demo Page
-https://vi3t4lov3.github.io/HW3-Password-Generator/
+https://vi3t4lov3.github.io/Password-Generator/
 
 ![imagename](./img/Fontpage.png)
 
